@@ -6,6 +6,7 @@ void setup()
   size(800, 800);
   loadData();
   printStars();
+  //noLoop();
 }
 
 // arrayList
@@ -33,7 +34,17 @@ void printStars()
   } 
 }
 
+int border = 50;
+
 void draw()
 {
+  strokeWeight(3);
+  stroke(255, 0, 255);
+  for(int i=border; i<width; i+=border)
+  {   
+    line(i, border, i, height-border);
+    line(border, i, width-border, i);
+  }
+  
   
 }
