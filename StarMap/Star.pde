@@ -32,5 +32,7 @@ class Star
     AbsMag = row.getFloat(16);
        
   }
+  
+  
 
 }

@@ -5,6 +5,7 @@ void setup()
 {
   size(800, 800);
   loadData();
+  printStars();
 }
 
 // arrayList
@@ -21,6 +22,15 @@ void loadData()
     Star star = new Star(row);
     data.add(star);
   }
+}
+
+void printStars()
+{
+ for(int i=0; i<data.size(); i++)
+  {
+     Star s = data.get(i);
+     println(s);
+  } 
 }
 
 void draw()
