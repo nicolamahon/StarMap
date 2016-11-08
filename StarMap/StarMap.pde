@@ -5,7 +5,7 @@ void setup()
 {
   size(800, 800);
   loadData();
-  printStars();
+  //printStars();
   //noLoop();
 }
 
@@ -35,12 +35,15 @@ void printStars()
 }
 
 int border = 50;
+int parsecs = 10;
 
 void draw()
 {
+  background(0);
   strokeWeight(3);
   stroke(255, 0, 255);
-  for(int i=border; i<width; i+=border)
+  
+  for(int i=border; i<width; i+=(width-(2*border))/parsecs)
   {   
     line(i, border, i, height-border);
     line(border, i, width-border, i);
